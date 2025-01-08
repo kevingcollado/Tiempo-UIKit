@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Se crea una instancia de UIWindow, que ocupe toda la pantalla del dispositivo, se instancía MainViewController() y se pasa como controlador inicial de vista, se vuelve llave y visible, se pasa la instancia a window.
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = MainViewController()
+        //Navigator Controller
+        let navigationController = UINavigationController(rootViewController: MainViewController())
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
         
