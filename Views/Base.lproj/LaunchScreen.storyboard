@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,18 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clima App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9M-Uv-wBF">
-                                <rect key="frame" x="156" y="311.66666666666669" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mzq-ZQ-tqO">
+                                <rect key="frame" x="145" y="291.33333333333331" width="100" height="101.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IYA-z2-nz2"/>
+                                    <constraint firstAttribute="width" constant="100" id="aUN-ct-vUW"/>
+                                </constraints>
+                                <imageReference key="image" image="sun.rain.fill" catalog="system" renderingMode="original"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9M-Uv-wBF">
+                                <rect key="frame" x="110.66666666666669" y="393.66666666666669" width="169" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="UWx-Nd-nP0"/>
+                                    <constraint firstAttribute="height" constant="67" id="wnD-jw-fEG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="51"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S9M-Uv-wBF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4em-4e-ETQ"/>
-                            <constraint firstItem="S9M-Uv-wBF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="jit-Ir-JWq"/>
+                            <constraint firstItem="S9M-Uv-wBF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="05j-7c-SX3"/>
+                            <constraint firstItem="mzq-ZQ-tqO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-80" id="2jD-3H-Zdi"/>
+                            <constraint firstItem="S9M-Uv-wBF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="5" id="hhw-gl-Bev"/>
+                            <constraint firstItem="mzq-ZQ-tqO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oTW-5w-VTQ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +52,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sun.rain.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
