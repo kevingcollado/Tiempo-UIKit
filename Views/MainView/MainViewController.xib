@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,11 +39,28 @@
                         <constraint firstItem="uZG-H4-OBu" firstAttribute="leading" secondItem="IAp-rq-EgW" secondAttribute="leading" id="yGy-H2-xgq"/>
                     </constraints>
                 </scrollView>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-eq-UaS">
+                    <rect key="frame" x="0.0" y="761" width="390" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="CtM-7Z-HGA"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem title="" id="BF1-XV-wf4">
+                            <imageReference key="image" image="map" catalog="system" symbolScale="default"/>
+                        </tabBarItem>
+                        <tabBarItem title="" image="location" catalog="system" id="S0c-B8-Bz3"/>
+                        <tabBarItem image="list.bullet" catalog="system" id="Hf0-eP-1qn"/>
+                    </items>
+                </tabBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="4vi-eq-UaS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1NV-G9-uG4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4vi-eq-UaS" secondAttribute="bottom" id="4Fc-vY-IKu"/>
                 <constraint firstItem="IAp-rq-EgW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="5wV-zO-8zS"/>
+                <constraint firstItem="4vi-eq-UaS" firstAttribute="leading" secondItem="IAp-rq-EgW" secondAttribute="leading" id="9EN-h2-uLg"/>
                 <constraint firstItem="IAp-rq-EgW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Fog-MB-HTJ"/>
                 <constraint firstAttribute="bottomMargin" secondItem="IAp-rq-EgW" secondAttribute="bottom" id="Kws-T5-o64"/>
                 <constraint firstItem="IAp-rq-EgW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L4P-Sn-QCY"/>
@@ -51,6 +69,9 @@
         </view>
     </objects>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="location" catalog="system" width="128" height="119"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
